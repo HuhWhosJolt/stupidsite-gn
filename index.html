@@ -713,7 +713,7 @@ footer {
                 </button>
 
                 <button id="settings" class="control-button" title="Settings!">
-                    <img src="setting.png" alt="settings">
+                    <img src="settings.png" alt="settings">
                 </button>
             </div>
         </div>
@@ -834,7 +834,7 @@ async function listZones() {
         const response = await fetch(zonesURL+"?t="+Date.now());
         const json = await response.json();
         zones = json;
-        zones[0].featured = true; // always gonna be the discord
+        zones[0].featured = true; 
         await Promise.all([fetchPopularity("year"), fetchPopularity("month"), fetchPopularity("week"), fetchPopularity("day")]);
         sortZones();
         try {
